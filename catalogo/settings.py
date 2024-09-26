@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'catalogo.wsgi.application'
 
 DATABASES = {
         'default': dj_database_url.config(
-        default='postgresql://postgresql:postgresql@localhots/postgresql',
+        default='postgresql://postgres:postgresql@localhots/postgres',
         conn_max_age=600
     )
     
