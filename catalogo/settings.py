@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'catalogo.urls'
@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'catalogo.wsgi.application'
 
 DATABASES = {
         'default': dj_database_url.config(
-        default='postgresql://postgres:postgresql@localhots/postgres',
+        default='postgresql://postgres:postgres@localhots/postgres',
         conn_max_age=600
     )
     
@@ -138,7 +138,7 @@ STATIC_URL = 'static/'
 
 if not DEBUG: 
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_STORAGE = 'whitenoise.storage.compressedManifestStaticfilesStorage'
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticfilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
