@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'catalogo.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default=os.environ.get('DATABASE_URL'),
+        default='postgresql://postgres:postgres@localhost/postgres',
         conn_max_age=600,
         ssl_require=True
     )
