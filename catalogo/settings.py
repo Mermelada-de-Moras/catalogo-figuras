@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'catalogo.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default=os.environ.get('DATABASE_URL'),
+        default=os.environ.get('postgresql://catalogo_r6hv_user:bxar2fQwDUTFtMIZbfZqqyOSigP8PvPQ@dpg-crqsu6m8ii6s73821300-a/catalogo_r6hv'),
         conn_max_age=600,
         ssl_require=True
     )
